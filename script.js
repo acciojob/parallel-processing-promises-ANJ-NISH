@@ -16,7 +16,7 @@ function loadImage(url) {
       .then(response => response.blob())
       .then(blob => {
         let img = document.createElement('img');
-        img.src = URL.createObjectURL(blob);
+        img.src = url;
         resolve(img);
       })
       .catch(error => reject(`Failed to load image's URL: ${url}`));
